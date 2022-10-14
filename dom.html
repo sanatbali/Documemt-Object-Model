@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM!</title>
 </head>
 <body id='0' style="background-color: red;">
     <button id='1' onclick="onn()">On</button>
     <button id='2' onclick="offf()">Off</button>
-    <p class="p1">hiii</p>
-    <p class="p1">hey</p>
+    <p class="p1">This is a Para of ON!</p>
+    <p class="p1">This is a Para of Off!</p>
     <script>
-        const body=document.querySelectorAll("body");
+        const body=document.querySelector("body");
         const p=document.querySelector("p");
         function onn(){
             p.forEach(changeColor);
@@ -43,7 +43,7 @@
 
         function changeColor2(element)
         {
-        element.style.backgroundColor="red";
+        element.style.backgroundColor="yellow";
         }
         
     </script>
