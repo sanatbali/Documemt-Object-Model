@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id='0' style="background-color: red;">
+    <button id='1' onclick="onn()">On</button>
+    <button id='2' onclick="offf()">Off</button>
+    <p class="p1">hiii</p>
+    <p class="p1">hey</p>
+    <script>
+        const body=document.querySelectorAll("body");
+        const p=document.querySelector("p");
+        function onn(){
+            p.forEach(changeColor);
+            body.forEach(on);
+    }
+        function offf()
+        {
+            p.forEach(changeColor2);
+            body.forEach(off);
+            
+        }
+        function on(element)
+        { 
+            // p.style.backgroundColor="black";
+            element.style.backgroundColor="red";
+            console.log("On");
+        }
+        function off(element)
+        {
+            // p.style.backgroundColor="red";
+            element.style.backgroundColor="black";
+            console.log("Off");
+        }
+        function changeColor(element)
+        {
+        element.style.backgroundColor="white";
+        }
+
+        function changeColor2(element)
+        {
+        element.style.backgroundColor="red";
+        }
+        
+    </script>
+</body>
+</html>
+
+<!-- 
+ First-
+
+ querySelector is just grabbing that element with using its ELEMENTS i.e body,h1,p,div 
+ where as getElementById we grab the element by using ID value ,the difference between this both DOM is 
+ when we use getElementById we use that perticuler element be it any element but we use it that perticular element 
+ but in querySelector we use the very first element of the order example 
+<p>Hello</p>
+<p>Bye</p>
+when we write document.querySelector("p");//this will run only very first element of p which is hello 
+and rest will be ignored but of we use querySelectAll("p") all will be selected thats all!
+
+Second- 
+
+To acess class in dom we use . and for id we use #
+
+Third-
+Variable.foreach(functionName)
+
+Fourth-
+
+Key take away is we mostly gonna use either or these querySelector,getElementById,querySelectorAll
+we also know that there is Array.from() dom ,sibling dom example if we want to access child element we use 
+const parent=document.querySelecto("p");
+const child=parent.querySelect("p");
+
+here we get second p element this is called sibling dom and there are tons of properties to access sibling etc!
+
+
+-->
